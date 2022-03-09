@@ -1,0 +1,32 @@
+#N canvas 4004 498 762 582 10;
+#X obj 100 306 *~;
+#X obj 140 201 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 325 184 \; pd dsp \$1;
+#X obj 325 149 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 137 250 \$1 20;
+#X obj 137 274 line~;
+#X text 138 183 Change volume;
+#X text 182 257 interpolation. Check line~ object.;
+#X text 55 410 Digital to Audio converter;
+#X text 348 119 Start/Stop DSP;
+#X text 38 34 Example: Basic audio Be careful at the volume.;
+#X text 117 109 cosine wave with 440Hz;
+#X text 161 134 <- Check Help;
+#X obj 99 387 dac~ 1 2;
+#X obj 100 133 osc~ 440;
+#X floatatom 100 78 5 0 0 0 - - -;
+#X text 141 76 <- You can change frequency here;
+#X text 348 133 Or you can click the DSP button on the main pd monitor
+;
+#X obj 137 227 / 127;
+#X connect 0 0 13 0;
+#X connect 0 0 13 1;
+#X connect 1 0 18 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 1;
+#X connect 14 0 0 0;
+#X connect 15 0 14 0;
+#X connect 18 0 4 0;

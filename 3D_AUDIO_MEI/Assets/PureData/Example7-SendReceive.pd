@@ -1,0 +1,45 @@
+#N canvas 844 152 791 527 10;
+#X obj 91 129 send test;
+#X obj 268 95 receive test;
+#X floatatom 91 86 5 0 0 0 - - -;
+#X floatatom 268 132 5 0 0 0 - - -;
+#X obj 142 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 320 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 178 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 353 133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 91 233 s simple;
+#X obj 269 200 r simple;
+#X floatatom 91 199 5 0 0 0 - - -;
+#X floatatom 269 233 5 0 0 0 - - -;
+#X obj 90 340 s~ signal;
+#X obj 90 309 osc~ 440;
+#X obj 269 307 r~ signal;
+#X obj 270 476 dac~;
+#X obj 270 418 *~;
+#X obj 312 396 line~;
+#X obj 312 352 / 127;
+#X obj 349 327 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 312 374 \$1 20;
+#X text 48 11 Example: Send and receive;
+#X text 49 28 Try to send several data;
+#X connect 1 0 3 0;
+#X connect 1 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;
+#X connect 13 0 12 0;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 16 0 15 1;
+#X connect 17 0 16 1;
+#X connect 18 0 20 0;
+#X connect 19 0 18 0;
+#X connect 20 0 17 0;

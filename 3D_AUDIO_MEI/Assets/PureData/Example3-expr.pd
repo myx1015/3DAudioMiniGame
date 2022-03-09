@@ -1,0 +1,18 @@
+#N canvas 881 270 450 300 10;
+#X obj 60 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 60 161 5 0 0 0 - - -;
+#X obj 60 123 expr ((5+(2*10))/5);
+#X obj 241 124 expr ($f1*5 + $f2/10);
+#X floatatom 241 91 5 0 0 0 - - -;
+#X floatatom 364 91 5 0 0 0 - - -;
+#X floatatom 241 162 5 0 0 0 - - -;
+#X text 49 16 Example: complex mathematics;
+#X text 84 85 click!;
+#X text 259 68 Change the values;
+#X text 111 142 Check the Help with right click;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;

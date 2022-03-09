@@ -1,0 +1,39 @@
+#N canvas 803 301 684 761 10;
+#X obj 192 257 readsf~;
+#X obj 246 291 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 96 466 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 191 449 dac~ 1 2;
+#X msg 72 158 \; pd dsp \$1;
+#X obj 243 316 / 127;
+#X obj 192 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 192 154 metro 1000;
+#X obj 105 431 - 100;
+#X obj 72 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 105 402 env~ 128;
+#X obj 191 353 *~ 0.5;
+#X text 63 75 Example: Play Audio file;
+#X text 268 153 Send a bang with specified rythm;
+#X obj 192 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 415 212 set the soundfile;
+#X text 246 251 Open sound file Check the help.;
+#X text 291 317 Volume control;
+#X text 137 493 fs;
+#X text 45 596 Display the volume with dB. 0dBfs = 100dB;
+#X msg 192 213 open ./SoundSource/shclkonk.wav \, 1;
+#X connect 0 0 11 0;
+#X connect 1 0 5 0;
+#X connect 5 0 11 1;
+#X connect 6 0 7 0;
+#X connect 7 0 14 0;
+#X connect 8 0 2 0;
+#X connect 9 0 4 0;
+#X connect 10 0 8 0;
+#X connect 11 0 3 0;
+#X connect 11 0 3 1;
+#X connect 11 0 10 0;
+#X connect 14 0 20 0;
+#X connect 20 0 0 0;

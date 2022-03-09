@@ -1,0 +1,16 @@
+#N canvas 548 258 450 300 10;
+#X floatatom 109 73 5 0 0 0 - - -;
+#X obj 109 120 expr $f1 \; if ($f1 > 0 \, $f1 * 10 \, 0) \; if ($f1
+<= 0 \, $f1 * 0.1 \, 0);
+#X floatatom 109 198 5 0 0 0 - - -;
+#X floatatom 188 198 5 0 0 0 - - -;
+#X floatatom 268 197 5 0 0 0 - - -;
+#X text 38 18 Example: if sentence;
+#X text 154 74 Change the number;
+#X text 41 220 Same number as inlet;
+#X text 181 220 First if;
+#X text 259 222 Second if;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
